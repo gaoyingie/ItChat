@@ -51,6 +51,8 @@ itchat.run()
 
 这是一个基于这一项目的[开源小机器人][robot-source-code]，百闻不如一见，有兴趣可以尝试一下。
 
+由于好友数量实在增长过快，自动通过好友验证的功能演示暂时关闭。
+
 ![QRCode][robot-qr]
 
 ## 截屏
@@ -207,7 +209,7 @@ import itchat
 newInstance = itchat.new_instance()
 newInstance.auto_login(hotReload=True, statusStorageDir='newInstance.pkl')
 
-@newInstance.msg_register(TEXT)
+@newInstance.msg_register(itchat.content.TEXT)
 def reply(msg):
     return msg.text
 
@@ -271,13 +273,15 @@ A: 有些账号是天生无法给自己的账号发送信息的，建议使用`f
 
 [HanSon/vbot][HanSon-vbot]: 基于PHP7的微信个人号机器人，通过实现匿名函数可以方便地实现各种自定义的功能
 
+[yaphone/itchat4j][yaphone-itchat4j]: 用Java扩展个人微信号的能力
+
 ## 问题和建议
 
 如果有什么问题或者建议都可以在这个[Issue][issue#1]和我讨论
 
 或者也可以在gitter上交流：[![Gitter][gitter-picture]][gitter]
 
-当然也可以加入我们新建的QQ群讨论：549762872
+当然也可以加入我们新建的QQ群讨论：549762872, 205872856
 
 [gitter-picture]: https://badges.gitter.im/littlecodersh/ItChat.svg
 [gitter]: https://gitter.im/littlecodersh/ItChat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
@@ -301,4 +305,5 @@ A: 有些账号是天生无法给自己的账号发送信息的，建议使用`f
 [zixia-wechaty]: https://github.com/zixia/wechaty
 [Mojo-Weixin]: https://github.com/sjdy521/Mojo-Weixin
 [HanSon-vbot]: https://github.com/hanson/vbot
+[yaphone-itchat4j]: https://github.com/yaphone/itchat4j
 [issue#1]: https://github.com/littlecodersh/ItChat/issues/1
